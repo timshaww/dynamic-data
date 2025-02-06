@@ -1,0 +1,12 @@
+{
+	"brand": {
+		"name": "Miami Travel",
+		"href": "/"
+	},
+	"links": [
+		{ "text": "Home", "href": "/" },
+		{ "text": "Beaches", "href": "/beaches" },
+		{ "text": "Nightlife", "href": "/nightlife" },
+		{ "text": "About", "href": "/about" }
+	]
+}
