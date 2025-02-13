@@ -1,33 +1,54 @@
-let numbers = [10, 12, 13, 14, 13, 58]
-let names = ['John', 'Jane', 'Jack', 'Jill', 'James', 'Jenny']
-// console.log(names[3])
-names.forEach((name,i) => {
-    console.log(name, i)
-    if (name === 'Jack') {
-        console.log('found Jack at position', i)
+//arrays
+// Numeric 
+let numbers = [10,12,13,14,13,56]
+// strings 
+let names = [ "Peter","Jack","Mary","Claudia"]
+//Access values of an array
+console.log(names[3])
+//array iteration
+names.forEach( (value,index)=>{
+    //Inside item
+    console.log(value,index)
+    if(value == "Mary") {
+        console.log("Found Mary in posistion  " + index )
     }
-})
+ })
+ // JavaScript Objects
 let person = {
-    firstName: 'tim',
-    lastName: 'shaw',
-    occupation: 'developer',
-    email: 'tes101@miami.edu',
-    getName: () => {
-        return this.firstName + ' ' + this.lastName
+    firstName:"William", // person.firstName
+    lastName:"Jattin",
+    occupation:"Lecturer",
+    email:"email@email.com",
+    getName: ()=>{
+        console.log("My name is " + this.firstName)
     }
 }
-console.log(person.getName())
+
+console.log(person.firstName)
+//JSON Does not store functions. Only key values
 
 let data = {
     brand: {
-        name: 'Miami Travel Site', 
-        link: '/',
-        img: '/images/logo.png'
+        name: "Miami Travel Site", // data.brand.name
+        link: "/",
+        img:"/images/logo.png"
     },
     links: [
-        {test: 'Home', href: '/'},
-        {test: 'Beaches', href: '/beaches'},
-        {test: 'Night Life', href: '/nightlife'},
-        {test: 'About', href: '/about'}
-    ],
+        {
+            text:"Home",
+            href:"/"
+        },
+        {
+            text:"Nightlife",
+            href:"/nightlife"
+        },
+        {
+            text:"Beaches",
+            href:"/beaches"
+        },
+        {
+            text:"About",
+            href:"/about"
+        }
+    ]
 }

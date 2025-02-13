@@ -1,3 +1,11 @@
 {{#if title}}
-<h1>Welcome to my {{title}} page!</h1>
+<h1> {{title}} </h1>
+{{/if}}
+
+{{>basic}}
+
+{{#if req.query.color }}
+<p>
+    Your favorite color is : {{ req.query.color }}
+</p>
 {{/if}}

@@ -1,0 +1,18 @@
+<table class="table table-striped">
+    <tr>
+        <th>First</th>
+        <th>Last</th>
+        <th>Email</th>
+        <th>Actions</th>
+    </tr>
+    {{#each users}}
+    <tr>
+        <td>{{this.firstname}}</td>
+        <td>{{this.lastname}}</td>
+        <td>{{this.email}}</td>
+        <td>
+            View | Delete
+        </td>
+    </tr>
+    {{/each}}
+</table>
