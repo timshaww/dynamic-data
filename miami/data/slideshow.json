@@ -1,0 +1,34 @@
+{
+	"slides": [
+		{
+			"url": "/images/slides/imagename.jpg",
+			"home": true,
+			"page": "nightlife"
+		},
+		{
+			"url": "/images/slides/imagename2.jpg",
+			"home": false,
+			"page": "nightlife"
+		},
+		{
+			"url": "/images/slides/imagename3.jpg",
+			"home": true,
+			"page": "nightlife"
+		},
+		{
+			"url": "/images/slides/imagename4.jpg",
+			"home": false,
+			"page": "nightlife"
+		},
+		{
+			"url": "/images/slides/imagename5.jpg",
+			"home": true,
+			"page": "nightlife"
+		},
+		{
+			"url": "/images/slides/imagename6.jpg",
+			"home": false,
+			"page": "nightlife"
+		}
+	]
+}

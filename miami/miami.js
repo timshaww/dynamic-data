@@ -15,13 +15,23 @@ app.engine('handlebars', handlebars.engine());
 app.set('view engine', 'handlebars');
 
 // To set the port execute: port=8080 node miami
-const port = process.env.port || 3000;
+const port = process.env.port || 3006;
 // Store navigation data
 let navigation = require('./data/navigation.json');
 //Create some routes
+let slideshow = require('./data/slideshow.json');
+
 app.get('/', (request, response) => {
+	let slides = slideshow.slides.filter((slide) => {
+		return slide.home === true;
+	});
 	response.type('text/html');
-	response.render('home', { title: 'Miami Travel Site', nav: navigation });
+	response.render('page', { title: 'Miami Travel Site', nav: navigation, slides: slides });
+});
+
+app.get('/page/:page', (request, response) => {
+	response.type('text/html');
+	response.render('page', { title: 'Miami Travel Site', nav: navigation });
 });
 
 app.get('/beaches', (request, response) => {
