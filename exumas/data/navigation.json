@@ -1,0 +1,29 @@
+{
+	"brand": {
+		"name": "Exumas Travel Site",
+		"href": "/",
+		"img": "/images/logo.png"
+	},
+	"links": [
+		{
+			"text": "Home",
+			"href": "/"
+		},
+		{
+			"text": "Nightlife",
+			"href": "/page/nightlife"
+		},
+		{
+			"text": "Beaches",
+			"href": "/page/beaches"
+		},
+		{
+			"text": "Water Activities",
+			"href": "/page/water-activities"
+		},
+		{
+			"text": "Culture",
+			"href": "/page/culture"
+		}
+	]
+}

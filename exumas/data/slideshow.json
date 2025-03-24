@@ -1,0 +1,84 @@
+{
+	"slides": [
+		{
+			"url": "/images/slides/artgallery.png",
+			"home": false,
+			"page": "culture"
+		},
+		{
+			"url": "/images/slides/bigds.png",
+			"home": false,
+			"page": "nightlife"
+		},
+		{
+			"url": "/images/slides/bluelagoon.png",
+			"home": true,
+			"page": "water-activities"
+		},
+		{
+			"url": "/images/slides/chatnchill.png",
+			"home": false,
+			"page": "nightlife"
+		},
+		{
+			"url": "/images/slides/cocoplumbeach.png",
+			"home": true,
+			"page": "beaches"
+		},
+		{
+			"url": "/images/slides/coralgardens.png",
+			"home": false,
+			"page": "water-activities"
+		},
+		{
+			"url": "/images/slides/eddies.png",
+			"home": false,
+			"page": "nightlife"
+		},
+		{
+			"url": "/images/slides/elizabethharbour.png",
+			"home": true,
+			"page": "water-activities"
+		},
+		{
+			"url": "/images/slides/fishfry.png",
+			"home": false,
+			"page": "culture"
+		},
+		{
+			"url": "/images/slides/heritagemuseum.png",
+			"home": false,
+			"page": "culture"
+		},
+		{
+			"url": "/images/slides/nurseshark.png",
+			"home": true,
+			"page": "water-activities"
+		},
+		{
+			"url": "/images/slides/peaceandplenty.png",
+			"home": false,
+			"page": "nightlife"
+		},
+		{
+			"url": "/images/slides/pigbeach.png",
+			"home": true,
+			"page": "beaches"
+		},
+		{
+			"url": "/images/slides/rolletown.png",
+			"home": false,
+			"page": "culture"
+		},
+		{
+			"url": "/images/slides/thunderball.png",
+			"home": false,
+			"page": "beaches"
+		},
+		{
+			"url": "/images/slides/tropicofcancer.png",
+			"home": true,
+			"page": "beaches"
+		}
+	]
+}

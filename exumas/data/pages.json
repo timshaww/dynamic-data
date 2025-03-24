@@ -1,0 +1,24 @@
+{
+	"pages": [
+		{
+			"page": "nightlife",
+			"title": "Exumas Nightlife",
+			"description": "Experience the authentic Bahamian nightlife in the Exumas. From beach bars to local restaurants, discover the vibrant evening scene with live music, fresh seafood, and friendly locals. Whether you're enjoying a sunset cocktail at Chat 'N' Chill or dancing to live music at Eddie's Edgewater, the Exumas offer a unique blend of island charm and entertainment."
+		},
+		{
+			"page": "beaches",
+			"title": "Exumas Beaches",
+			"description": "Discover the pristine beaches of the Exumas, where crystal-clear waters meet powdery white sand. From the famous swimming pigs at Pig Beach to the stunning Thunderball Grotto, each beach offers its own unique experience. Whether you're snorkeling in the vibrant coral reefs, relaxing on secluded shores, or exploring hidden coves, the Exumas' beaches are truly paradise found."
+		},
+		{
+			"page": "water-activities",
+			"title": "Water Activities",
+			"description": "Dive into the crystal-clear waters of the Exumas with an array of exciting water activities. From world-class snorkeling spots to thrilling boat tours, discover the underwater wonders of this tropical paradise. Whether you're swimming with nurse sharks, exploring coral reefs, or sailing between islands, the Exumas offer unforgettable aquatic adventures."
+		},
+		{
+			"page": "culture",
+			"title": "Local Culture",
+			"description": "Immerse yourself in the rich Bahamian culture of the Exumas. Experience traditional Junkanoo celebrations, sample authentic Bahamian cuisine, and learn about the islands' fascinating history. From local art galleries to historic landmarks, discover the heart and soul of the Exumas through its people, traditions, and heritage."
+		}
+	]
+}

@@ -1,0 +1,32 @@
+{{!-- Check if on home page --}}
+{{#if isHomePage}}
+<div class="home-slideshow">
+    {{>slideshow}}
+    <div class="py-5">
+         {{#if title}}
+        <h1> {{title}} </h1>
+        {{/if}}
+
+        {{#if description}}
+        <p> {{description}} </p>
+        {{/if}}
+    </div>
+</div>
+{{else}}
+<div class="py-5">
+    <div class="content-left">
+        {{#if title}}
+        <h1> {{title}} </h1>
+        {{/if}}
+
+        {{#if description}}
+        <p> {{description}} </p>
+        {{/if}}
+    </div>
+    <div class="slideshow-container">
+        {{>slideshow}}
+    </div>
+</div>
+{{/if}}
+
+{{>destinations}}

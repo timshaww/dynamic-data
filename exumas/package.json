@@ -1,0 +1,22 @@
+{
+	"name": "miami",
+	"version": "1.0.0",
+	"description": "",
+	"main": "miami.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"init": "Running init",
+		"dev": "nodemon app.js"
+	},
+	"author": "Tim Shaw",
+	"license": "ISC",
+	"dependencies": {
+		"body-parser": "^1.20.3",
+		"express": "^4.21.2",
+		"express-handlebars": "^8.0.1",
+		"multer": "^1.4.5-lts.1"
+	},
+	"devDependencies": {
+		"nodemon": "^3.1.9"
+	}
+}
