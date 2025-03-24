@@ -1,14 +1,9 @@
 {
 	"brand": {
 		"name": "Exumas Travel Site",
-		"href": "/",
-		"img": "/images/logo.png"
+		"href": "/"
 	},
 	"links": [
-		{
-			"text": "Home",
-			"href": "/"
-		},
 		{
 			"text": "Nightlife",
 			"href": "/page/nightlife"

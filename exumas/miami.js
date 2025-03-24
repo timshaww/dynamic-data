@@ -33,15 +33,19 @@ app.get('/', (req, res) => {
 	let slides = slideshow.slides.filter((slide) => {
 		return slide.home === true;
 	});
+	let dests = destinations.locations.filter((destination) => {
+		return destination.home === true;
+	});
 
 	res.type('text/html');
 	res.render('page', {
 		title: 'Exumas Travel Guide',
 		description:
-			'Discover the best places to visit in the Exumas. From the famous swimming pigs to the stunning Thunderball Grotto, this guide has everything you need to know about the Exumas.',
+			'Discover the best places to visit in the Exumas. From the famous swimming pigs to the stunning Thunderball Grotto, this guide has everything you need to know about the Exumas.\n\nBe sure to use the navigation bar to explore the rest of the Exumas!',
 		nav: nav,
 		slides: slides,
 		images: gallery.images,
+		locations: dests,
 		isHomePage: true,
 	});
 });

@@ -4,97 +4,113 @@
 			"page": "nightlife",
 			"name": "Chat 'N' Chill",
 			"description": "A famous beach bar on Stocking Island where you can feed stingrays and enjoy fresh conch salad.",
-			"image": "/images/destinations/chatnchill.png"
+			"image": "/images/destinations/chatnchill.png",
+			"home": false
 		},
 		{
 			"page": "nightlife",
 			"name": "Big D's Conch Spot",
 			"description": "Authentic Bahamian cuisine and local atmosphere in George Town.",
-			"image": "/images/destinations/bigds.png"
+			"image": "/images/destinations/bigds.png",
+			"home": false
 		},
 		{
 			"page": "nightlife",
 			"name": "Eddie's Edgewater",
 			"description": "Popular local spot for fresh seafood and live music in George Town.",
-			"image": "/images/destinations/eddies.png"
+			"image": "/images/destinations/eddies.png",
+			"home": false
 		},
 		{
 			"page": "nightlife",
 			"name": "Club Peace & Plenty",
 			"description": "Historic hotel bar with classic Bahamian charm and evening entertainment.",
-			"image": "/images/destinations/peaceandplenty.png"
+			"image": "/images/destinations/peaceandplenty.png",
+			"home": true
 		},
 		{
 			"page": "beaches",
 			"name": "Pig Beach",
 			"description": "Famous beach where you can swim with the famous swimming pigs of the Exumas.",
-			"image": "/images/destinations/pigbeach.png"
+			"image": "/images/destinations/pigbeach.png",
+			"home": true
 		},
 		{
 			"page": "beaches",
 			"name": "Thunderball Grotto",
 			"description": "Spectacular underwater cave system featured in James Bond films, perfect for snorkeling.",
-			"image": "/images/destinations/thunderball.png"
+			"image": "/images/destinations/thunderball.png",
+			"home": true
 		},
 		{
 			"page": "beaches",
 			"name": "Tropic of Cancer Beach",
 			"description": "Stunning white sand beach on Little Exuma, named after the latitude line it sits on.",
-			"image": "/images/destinations/tropicofcancer.png"
+			"image": "/images/destinations/tropicofcancer.png",
+			"home": false
 		},
 		{
 			"page": "beaches",
 			"name": "Coco Plum Beach",
 			"description": "Pristine beach with crystal clear waters and perfect sandbars for swimming.",
-			"image": "/images/destinations/cocoplumbeach.png"
+			"image": "/images/destinations/cocoplumbeach.png",
+			"home": true
 		},
 		{
 			"page": "water-activities",
 			"name": "Nurse Shark Beach",
 			"description": "Swim with friendly nurse sharks in shallow waters, a unique and safe experience for all ages.",
-			"image": "/images/destinations/nurseshark.png"
+			"image": "/images/destinations/nurseshark.png",
+			"home": true
 		},
 		{
 			"page": "water-activities",
 			"name": "Elizabeth Harbour",
 			"description": "Perfect spot for sailing, kayaking, and paddleboarding with stunning views of the surrounding islands.",
-			"image": "/images/destinations/elizabethharbour.png"
+			"image": "/images/destinations/elizabethharbour.png",
+			"home": false
 		},
 		{
 			"page": "water-activities",
 			"name": "Coral Gardens",
 			"description": "Vibrant coral reef system teeming with tropical fish and marine life, ideal for snorkeling.",
-			"image": "/images/destinations/coralgardens.png"
+			"image": "/images/destinations/coralgardens.png",
+			"home": true
 		},
 		{
 			"page": "water-activities",
 			"name": "Blue Lagoon Island",
 			"description": "Crystal-clear waters perfect for swimming, snorkeling, and watching dolphins in their natural habitat.",
-			"image": "/images/destinations/bluelagoon.png"
+			"image": "/images/destinations/bluelagoon.png",
+			"home": false
 		},
 		{
 			"page": "culture",
 			"name": "Exuma Heritage Museum",
 			"description": "Learn about the islands' history, from Lucayan settlements to modern Bahamian culture.",
-			"image": "/images/destinations/heritagemuseum.png"
+			"image": "/images/destinations/heritagemuseum.png",
+			"home": false
 		},
 		{
 			"page": "culture",
 			"name": "George Town Fish Fry",
 			"description": "Weekly gathering featuring fresh seafood, local music, and authentic Bahamian atmosphere.",
-			"image": "/images/destinations/fishfry.png"
+			"image": "/images/destinations/fishfry.png",
+			"home": true
 		},
 		{
 			"page": "culture",
 			"name": "Art Gallery Exuma",
 			"description": "Showcasing works by local artists, from traditional crafts to contemporary Bahamian art.",
-			"image": "/images/destinations/artgallery.png"
+			"image": "/images/destinations/artgallery.png",
+			"home": true
 		},
 		{
 			"page": "culture",
 			"name": "Rolle Town",
 			"description": "Historic settlement with traditional Bahamian architecture and local community life.",
-			"image": "/images/destinations/rolletown.png"
+			"image": "/images/destinations/rolletown.png",
+			"home": false
 		}
 	]
 }
