@@ -1,0 +1,76 @@
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Customer Details</h2>
+    <div>
+        <a href="/customers" class="btn btn-secondary">Back to Customers</a>
+        <a href="/customers/{{customer.id}}/edit" class="btn btn-warning">Edit Customer</a>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header bg-primary text-white">
+        <h5 class="mb-0">{{customer.firstName}} {{customer.lastName}}</h5>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Contact Information</h5>
+                <p><strong>Email:</strong> {{customer.email}}</p>
+                <p><strong>Phone:</strong> {{customer.phone}}</p>
+            </div>
+            <div class="col-md-6">
+                <h5>Address</h5>
+                <p>{{customer.address}}</p>
+                <p>{{customer.city}}, {{customer.state}} {{customer.zip}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-4">
+    <h3>Customer Orders</h3>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead class="table-light">
+                <tr>
+                    <th>Order ID</th>
+                    <th>Size</th>
+                    <th>Toppings</th>
+                    <th>Status</th>
+                    <th>Created Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#if customer.Orders.length}}
+                    {{#each customer.Orders}}
+                        <tr>
+                            <td>{{this.id}}</td>
+                            <td>{{this.size}}</td>
+                            <td>{{this.toppings}}</td>
+                            <td>
+                                <span class="badge rounded-pill
+                                    {{#if (eq this.status 'New')}}bg-info{{/if}}
+                                    {{#if (eq this.status 'Processing')}}bg-warning{{/if}}
+                                    {{#if (eq this.status 'Completed')}}bg-success{{/if}}">
+                                    {{this.status}}
+                                </span>
+                            </td>
+                            <td>{{formatDate this.createdAt}}</td>
+                            <td>
+                                <div class="btn-group" role="group">
+                                    <a href="/orders/{{this.id}}" class="btn btn-sm btn-primary">View</a>
+                                    <a href="/orders/{{this.id}}/edit" class="btn btn-sm btn-warning">Edit</a>
+                                </div>
+                            </td>
+                        </tr>
+                    {{/each}}
+                {{else}}
+                    <tr>
+                        <td colspan="6" class="text-center">No orders found for this customer.</td>
+                    </tr>
+                {{/if}}
+            </tbody>
+        </table>
+    </div>
+    <a href="/orders/new?customerId={{customer.id}}" class="btn btn-success mt-2">Create Order for this Customer</a>
+</div> 

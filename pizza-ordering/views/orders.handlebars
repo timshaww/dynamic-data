@@ -1,0 +1,71 @@
+<h2>Orders</h2>
+
+<style>
+	.action-buttons { display: flex; gap: 5px; } .action-btn { padding: 6px 16px; border: none; color: white; font-weight: 500; text-decoration: none;
+	display: inline-block; height: 38px; border-radius: 4px; line-height: 24px; text-align: center; } .view-btn { background-color: #3b71ca; }
+	.edit-btn { background-color: #ffc107; color: #212529; } .delete-btn { background-color: #dc3545; cursor: pointer; } .action-btn:hover { opacity:
+	0.9; color: white; } .edit-btn:hover { color: #212529; } form { margin: 0; padding: 0; height: 38px; }
+</style>
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <p>View all pizza orders</p>
+    <a href="/orders/new" class="btn btn-success">Create New Order</a>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead class="table-light">
+            <tr>
+                <th>ID</th>
+                <th>Customer</th>
+                <th>Size</th>
+                <th>Toppings</th>
+                <th>Status</th>
+                <th class="actions-column">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#if orders.length}}
+                {{#each orders}}
+                    <tr>
+                        <td>{{this.id}}</td>
+                        <td>
+                            <a href="/customers/{{this.CustomerId}}">
+                                {{!-- {{this.Customer.firstName}} {{this.Customer.lastName}} --}}
+                                {{this.[Customer.firstName]}} {{this.[Customer.lastName]}}
+                            </a>
+                        </td>
+                        <td>{{this.size}}</td>
+                        <td>{{this.toppings}}</td>
+                        <td>
+                            <span class="badge rounded-pill
+                                {{#if (eq this.status 'New')}}bg-info{{/if}}
+                                {{#if (eq this.status 'Processing')}}bg-warning{{/if}}
+                                {{#if (eq this.status 'Completed')}}bg-success{{/if}}">
+                                {{this.status}}
+                            </span>
+                        </td>
+                        <td class='actions-column'>
+							<div class='action-buttons'>
+								<a href='/orders/{{this.id}}' class='action-btn view-btn'>View</a>
+								<a href='/orders/{{this.id}}/edit' class='action-btn edit-btn'>Edit</a>
+								<form
+									action='/orders/{{this.id}}?_method=DELETE'
+									method='POST'
+									style='display: inline-block;'
+									onsubmit="return confirm('Are you sure you want to delete this customer?');"
+								>
+									<button type='submit' class='action-btn delete-btn'>Delete</button>
+								</form>
+							</div>
+						</td>
+                    </tr>
+                {{/each}}
+            {{else}}
+                <tr>
+                    <td colspan="6" class="text-center">No orders found.</td>
+                </tr>
+            {{/if}}
+        </tbody>
+    </table>
+</div> 
