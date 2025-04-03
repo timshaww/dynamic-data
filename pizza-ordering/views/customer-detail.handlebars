@@ -1,10 +1,16 @@
 <div class="d-flex justify-content-between align-items-center mb-3">
     <h2>Customer Details</h2>
     <div>
-        <a href="/customers" class="btn btn-secondary">Back to Customers</a>
+        <button onclick="window.history.back()" class="btn btn-secondary">Back</button>
         <a href="/customers/{{customer.id}}/edit" class="btn btn-warning">Edit Customer</a>
     </div>
 </div>
+<style>
+	.action-buttons { display: flex; gap: 5px; } .action-btn { padding: 6px 16px; border: none; color: white; font-weight: 500; text-decoration: none;
+	display: inline-block; height: 38px; border-radius: 4px; line-height: 24px; text-align: center; } .view-btn { background-color: #3b71ca; }
+	.edit-btn { background-color: #ffc107; color: #212529; } .delete-btn { background-color: #dc3545; cursor: pointer; } .action-btn:hover { opacity:
+	0.9; color: white; } .edit-btn:hover { color: #212529; } form { margin: 0; padding: 0; height: 38px; }
+</style>
 
 <div class="card">
     <div class="card-header bg-primary text-white">
@@ -41,8 +47,8 @@
                 </tr>
             </thead>
             <tbody>
-                {{#if customer.Orders.length}}
-                    {{#each customer.Orders}}
+                {{#if orders.length}}
+                    {{#each orders}}
                         <tr>
                             <td>{{this.id}}</td>
                             <td>{{this.size}}</td>
@@ -56,12 +62,20 @@
                                 </span>
                             </td>
                             <td>{{formatDate this.createdAt}}</td>
-                            <td>
-                                <div class="btn-group" role="group">
-                                    <a href="/orders/{{this.id}}" class="btn btn-sm btn-primary">View</a>
-                                    <a href="/orders/{{this.id}}/edit" class="btn btn-sm btn-warning">Edit</a>
-                                </div>
-                            </td>
+                            <td class='actions-column'>
+							<div class='action-buttons'>
+								<a href='/orders/{{this.id}}' class='action-btn view-btn'>View</a>
+								<a href='/orders/{{this.id}}/edit' class='action-btn edit-btn'>Edit</a>
+								<form
+									action='/orders/{{this.id}}?_method=DELETE'
+									method='POST'
+									style='display: inline-block;'
+									onsubmit="return confirm('Are you sure you want to delete this customer?');"
+								>
+									<button type='submit' class='action-btn delete-btn'>Delete</button>
+								</form>
+							</div>
+						</td>
                         </tr>
                     {{/each}}
                 {{else}}

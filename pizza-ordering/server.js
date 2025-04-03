@@ -90,12 +90,16 @@ app.get('/customers/:id', async (req, res) => {
 			include: [Order],
 			raw: true,
 		});
+		const orders = await Order.findAll({
+			where: { CustomerId: req.params.id },
+			raw: true,
+		});
 
 		if (!customer) {
 			return res.status(404).send('Customer not found');
 		}
 
-		res.render('customer-detail', { customer });
+		res.render('customer-detail', { customer, orders });
 	} catch (err) {
 		console.error('Error fetching customer:', err);
 		res.status(500).send('Error fetching customer');
