@@ -88,6 +88,9 @@ app.engine(
 	handlebars.engine({
 		helpers: {
 			formatDate: function (date) {
+				if (!date || date === 'Invalid Date') {
+					return null;
+				}
 				return moment(date).format('MMM D, YYYY');
 			},
 		},
@@ -106,8 +109,6 @@ app.use(methodOverride('_method'));
 app.get('/', async (req, res) => {
 	try {
 		const latestLists = await List.findAll({
-			limit: 3,
-			order: [['createdAt', 'DESC']],
 			raw: true,
 		});
 
@@ -131,13 +132,13 @@ app.get('/lists', async (req, res) => {
 					as: 'TodoItems',
 				},
 			],
-			raw: true,
-			nest: true,
 		});
+
+		const formattedLists = lists.map((list) => list.get({ plain: true }));
 
 		res.render('lists/index', {
 			title: 'All Lists',
-			lists,
+			lists: formattedLists,
 		});
 	} catch (error) {
 		console.error('Error fetching lists:', error);
@@ -232,7 +233,7 @@ app.post('/admin/lists/:listId/todos', async (req, res) => {
 		await TodoItem.create({
 			title,
 			description,
-			dueDate,
+			dueDate: dueDate ? new Date(dueDate) : null,
 			listId: req.params.listId,
 		});
 		res.redirect(`/lists/${req.params.listId}`);

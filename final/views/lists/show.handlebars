@@ -61,7 +61,7 @@
                                 <textarea name="description" 
                                     class="hidden w-full px-3 py-1 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">{{this.description}}</textarea>
                             </div>
-                            {{#if this.dueDate}}
+                            {{#if (formatDate this.dueDate)}}
                             <div>
                                 <span class="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
                                     Due: {{formatDate this.dueDate}}
