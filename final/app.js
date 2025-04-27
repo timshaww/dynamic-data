@@ -136,7 +136,7 @@ app.get('/lists', async (req, res) => {
 
 		const formattedLists = lists.map((list) => list.get({ plain: true }));
 
-		res.render('lists/index', {
+		res.render('lists', {
 			title: 'All Lists',
 			lists: formattedLists,
 		});
@@ -164,7 +164,7 @@ app.get('/lists/:id', async (req, res) => {
 		const listData = list.get({ plain: true });
 		const todoItems = listData.TodoItems || [];
 
-		res.render('lists/show', {
+		res.render('list-detail', {
 			title: list.title,
 			list: listData,
 			todoItems,
@@ -184,7 +184,7 @@ app.get('/admin', async (req, res) => {
 		const allTasks = await TodoItem.findAll({
 			raw: true,
 		});
-		res.render('admin/index', {
+		res.render('admin', {
 			title: 'Admin Dashboard',
 			lists,
 			allTasks,
