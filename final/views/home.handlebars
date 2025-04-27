@@ -1,0 +1,45 @@
+<div class='max-w-4xl mx-auto'>
+	<h1 class='text-3xl font-bold mb-6'>Welcome to Task Manager</h1>
+
+	<div class='bg-white rounded-lg shadow-md p-6 mb-8'>
+		<h2 class='text-xl font-semibold mb-4'>About Task Manager</h2>
+		<p class='text-gray-700 mb-4'>
+			Task Manager is a simple and efficient way to organize your tasks and to-do lists. Create multiple lists, add tasks, and manage them all
+			in one place.
+		</p>
+		<div class='grid grid-cols-1 md:grid-cols-2 gap-4'>
+			<div class='bg-blue-50 p-4 rounded'>
+				<h3 class='font-semibold mb-2'>Features</h3>
+				<ul class='list-disc list-inside text-gray-700'>
+					<li>Create multiple lists</li>
+					<li>Add tasks to lists</li>
+					<li>Set due dates</li>
+					<li>Mark tasks as complete</li>
+				</ul>
+			</div>
+			<div class='bg-green-50 p-4 rounded'>
+				<h3 class='font-semibold mb-2'>Getting Started</h3>
+				<ul class='list-disc list-inside text-gray-700'>
+					<li>Visit the Lists page to see all your lists</li>
+					<li>Use the Admin page to manage lists and tasks</li>
+					<li>Start organizing your tasks today!</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<h2 class='text-2xl font-bold mb-4'>Latest Lists</h2>
+	<div class='grid grid-cols-1 md:grid-cols-3 gap-4'>
+		{{#each latestLists}}
+			<div class='bg-white rounded-lg shadow-md p-4'>
+				<h3 class='text-lg font-semibold mb-2'>{{this.title}}</h3>
+				<p class='text-gray-600 mb-4'>{{this.description}}</p>
+				<a href='/lists/{{this.id}}' class='text-blue-600 hover:text-blue-800'>View Tasks →</a>
+			</div>
+		{{else}}
+			<div class='col-span-3 text-center text-gray-500'>
+				No lists created yet. Create your first list in the Admin section!
+			</div>
+		{{/each}}
+	</div>
+</div>
